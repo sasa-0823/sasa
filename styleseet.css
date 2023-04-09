@@ -54,7 +54,7 @@ a:hover {
 /* ロード後 */
 
 
-.After-loading-Conteiner {
+.Container {
   display: flex;
   height: 100vh;
   animation-name: fade;
@@ -81,15 +81,15 @@ a:hover {
   font-size: 1.5rem;
 }
 
-/* タイトルタグ */
-.top-title {
+/* yukio sasahara photographer　H2タグ */
+.title {
   margin-top: 10vh;
   margin-left: 20px;
   font-size: 1.75rem;
 }
 
 /* リスト */
-.all-list {
+.alllist {
   margin-top: 100px;
 }
 
@@ -114,7 +114,7 @@ a:hover {
   left: 0;
   bottom: 0;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(20px);
   background: white;
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -149,7 +149,7 @@ a:hover {
 }
 
 /* home画像 */
-.home-photo-add {
+.photo {
   flex: 1;
   position: relative;
   overflow: hidden;
@@ -175,14 +175,12 @@ a:hover {
   position: absolute;
   margin: auto;
   z-index: -1;
-  filter: blur(3px) brightness(60%);
+  filter: blur(3px) brightness(80%);
   /* ↑ボカシ・明るさ */
   opacity: 0.7;
-  height: auto;
-  width: 120%;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  min-height: 100vh;
+  width: 100%;
+
 }
 
 
