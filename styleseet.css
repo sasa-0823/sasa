@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+/* ↓↓横幅600px以下の装飾↓↓ */
+
+@media (max-width:600px){
+
+  
+}
+
+
+/* ↓↓横幅600px超過時の装飾↓↓ */
 body {
   margin: 0;
 }
