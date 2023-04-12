@@ -8,6 +8,7 @@
   <title>sasahara yukio photogurafi</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1″>
   <link rel="stylesheet" href="styleseet.css">
   <script src="main.js" defer></script>
 
@@ -15,20 +16,30 @@
 
 
 <body>
-  <!-- ロード画面 -------------->
+  <!-- ロード画面 -->
   <div id="loading">
     <p id="loadText">now loading</p>
   </div>
 
   <!-- ロード終了後 -->
-  <div class="Container">
-
-    <nav class="menu">
-
+  
+  
+  <button class="hamburger hamburger_space" id="js-hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  
+  <div class="After-loading-Conteiner">
+    
+    <nav class="menu" id="hamburger-menu-js">
+      
       <a href="index.html">
-        <h2 class="title">yukio sasahara photographer</h2>
+        <h2 class="top-title">yukio sasahara photographer</h2>
       </a>
-      <ul class="alllist" style="list-style: none; padding-left: 0;">
+      
+      
+      <ul class="all-list" style="list-style: none; padding-left: 0;">
         <li class="list"><a href=nature.html>nature</a></li>
         <li class="list"><a href=nature.html>city</a></li>
         <li class="list"><a href=nature.html>portrait</a></li>
@@ -42,15 +53,12 @@
 
     </nav>
 
-    <div class="photo" id="photo">
-      <!-- <img src="img/home/_DSC5573.jpg" alt="home2" class="blur">
-      <img src="img/home/_DSC5573.jpg" alt="home" class="homephoto"> -->
+    <div class="home-photo-add">
+      <img id="photo-back" src="img/home/_DSC5573.jpg" alt="home2" class="blur">
+      <img id="photo-front" src="img/home/_DSC5573.jpg" alt="home" class="homephoto">
     </div>
 
   </div>
-
-
-
 
 </body>
 

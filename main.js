@@ -1,7 +1,7 @@
 // ロードアニメーション//
 const loading = document.querySelector("#loading")
 
-const load = window.addEventListener("load", () => {
+window.addEventListener("load", () => {
   setTimeout(() => {
     loading.classList.add("loaded");
   }, 1000); // 1秒後にクラスを追加
@@ -10,8 +10,8 @@ const load = window.addEventListener("load", () => {
 
 //homeのランダム再生↓↓↓↓↓↓↓↓↓↓↓↓
 
-// 定数
-let photo = document.querySelector("#photo");
+let photo_back = document.querySelector("#photo-back");
+let photo_front = document.querySelector("#photo-front");
 
 
 //ホーム画像リスト
@@ -28,11 +28,33 @@ const photolist = [
 // リストからランダムに値を取得(ここ良く分かってないでコピペしてるとこ)
 let getList = photolist[Math.floor(Math.random() * photolist.length)];
 
-// console.log(getList);
+console.log(getList);
 
-// HTMLタグを挿入
-const homephoto =
-  `<img src="${getList}" alt="home2" class="blur">
-  <img src="${getList}" alt="home" class="homephoto">`;
+//imgタグに設定追加
+photo_back.src=(getList);
+photo_front.src=(getList);
 
-photo.insertAdjacentHTML("afterbegin", homephoto);
+
+// HTMLタグを挿入(没)↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+// const homephoto =
+//   `<img src="${getList}" alt="home2" class="blur">
+//   <img src="${getList}" alt="home" class="homephoto">`;
+
+// photo.insertAdjacentHTML("afterbegin", homephoto);
+//↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+
+
+
+
+
+//ハンバーガーメニュークリック時のクラス切り替え↓↓↓↓
+
+const ham = document.querySelector('#js-hamburger');
+const ham_menu = document.querySelector('#hamburger-menu-js');
+
+ham.addEventListener('click', function () {
+
+  ham.classList.toggle('active');
+  ham_menu.classList.toggle('active');
+
+});
