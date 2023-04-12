@@ -204,7 +204,8 @@ a:hover {
 @media (max-width:600px) {
 
   .menu
-    /* ハンバーガーメニューの全体範囲*/
+
+  /* ハンバーガーメニューの全体範囲*/
     {
     inset: 0;
     z-index: 3;
@@ -218,7 +219,6 @@ a:hover {
     opacity: 0.9;
     transform: translateX(-100%);
     transition: ease .4s;
-    
   }
 
 
@@ -239,68 +239,90 @@ a:hover {
 
   }
 
- /* ハンバーガーメニュー */
- .hamburger_space {
-  position: absolute;
-  top: 2%;
-  right: 10%;
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0);
-  border: none;
- }
+  /* ハンバーガーメニュー */
+  .hamburger_space {
+    position: absolute;
+    top: 2%;
+    right: 10%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: block;
+    z-index: 999;
+  }
 
- .hamburger {
-  display: block;/* PC表示で消していたハンバーガーメニューを再表示 */
- }
+  .hamburger {
+    display: block;
+    /* PC表示で消していたハンバーガーメニューを再表示 */
+  }
 
   /* 以下ハンバーガーの線 */
- .hamburger span {
-  width: 90%;
-  height: 1px;
-  background-color: #ffffff;
-  position: relative;
-  transition: ease .4s;
-  /*ハンバーガーメニュークリック時のアニメーション0.４秒*/
-  display: block;
- }
+  .hamburger span {
+    width: 90%;
+    height: 1px;
+    background-color: #ffffff;
+    position: relative;
+    transition: ease .4s;
+    /*ハンバーガーメニュークリック時のアニメーション0.４秒*/
+    display: block;
+    z-index: 999;
+  }
 
- .hamburger span:nth-child(1) {
-  top: 0;
- }
+  .hamburger span:nth-child(1) {
+    top: 0;
+  }
 
-.hamburger span:nth-child(2) {
-  margin: 8px 0;
-}
+  .hamburger span:nth-child(2) {
+    margin: 8px 0;
+  }
 
-.hamburger span:nth-child(3) {
-  top: 0;
-}
-/* ↑↑↑↑以下ハンバーガーの線↑↑↑↑ */
+  .hamburger span:nth-child(3) {
+    top: 0;
+  }
 
-
-/* .top-titleタグ(yukio sasahara photographr) */
-.top-title {
-  margin-top: 10vh;
-  margin-left: 7%;
-  font-size: 2rem;
-}
-
-/* ロゴ */
-.logo {
-  /*ロゴを並ばせる*/
-  margin-left: 10%;
-  display: flex;
-  position: absolute;
-  bottom: 30vh;
-  gap: 0px 30px;
-}
+  /* ↑↑↑↑以下ハンバーガーの線↑↑↑↑ */
 
 
+  /* .top-titleタグ(yukio sasahara photographr) */
+  .top-title {
+    margin-top: 10vh;
+    margin-left: 7%;
+    font-size: 2rem;
+  }
+
+  /* ロゴ */
+  .logo {
+    /*ロゴを並ばせる*/
+    margin-left: 10%;
+    display: flex;
+    position: absolute;
+    bottom: 30vh;
+    gap: 0px 30px;
+  }
 
 
-/* ハンバーガーメニュー操作後の装飾 */
 
+
+  /* ハンバーガーメニュー操作後の装飾 */
+
+  .menu.active{
+    transform: translateX(0);
+  }
+
+  .hamburger.active span:nth-child(1) {
+    top: 5px;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    top: -13px;
+    transform: rotate(-45deg);
+  }
 
 
 }
